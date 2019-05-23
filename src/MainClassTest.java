@@ -21,14 +21,19 @@ public class MainClassTest extends MainClass {
         } else {
             System.out.println("Число меньше 45");
         }
-    }@Test
+    }
+
+    @Test
     public void testGetClassString() {
         java.lang.String c = "Hello";
-        if(this.getClassString().toLowerCase().contains(c.toLowerCase())){
+        java.lang.String d = "hello";
+        if (this.getClassString().contains(c)) {
             System.out.println("Строка содержит Hello");
-        } else {
+        } else if (this.getClassString().contains(d)){
+            System.out.println("Строка содержит hello");}
+        else
             Assert.fail("Строка не содержится");
         }
     }
-}
+
 
